@@ -1,0 +1,86 @@
+.search-component{
+    color: rgba(255, 255, 255, 0.6);
+    position: fixed;
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out;
+    background: radial-gradient(rgba(0, 0, 0, 0.279), rgba(0, 0, 0, 0.815));
+}
+.search-component .search-content{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.search-component .search-content input{
+    font-size: 3rem;
+    background: none;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    min-width: 100%;
+}
+.search-component .search-close{
+    position: absolute;
+    font-size: 2rem;
+    top: 2rem;
+    right: 2rem;
+    color: rgb(180, 64, 83);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.search-component .search-close:hover{
+    transform: rotate(90deg) scale(1.4);
+}
+.search-component .search-content .search-results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.search-component .search-content .search-results .destinations, .search-component .search-content .search-results .locations {
+    margin: 1rem;
+}
+
+.search-component .search-content .search-results .destinations a{
+    text-decoration: none;
+    color: white;
+    font-size: xx-large;
+    transition: .3s ease-in-out;
+}
+.search-component .search-content .search-results .destinations a:hover{
+    color: green;
+}
+.search-component .search-content .search-results .locations .loc{
+    text-decoration: none;
+    color: white;
+    font-size: xx-large;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.search-component .search-content .search-results .locations .loc:hover{
+    color: rgb(0, 87, 128);
+}
+
+@media (max-width: 750px) {
+    .search-component{
+        background: radial-gradient(rgba(65, 28, 28, .9), rgba(0, 0, 0, .9));
+    }
+    .search-component .search-content input{
+        font-size: 1.5rem;
+    }
+    .search-component .search-content .search-results .destinations, .search-component .search-content .search-results .locations {
+        margin: 1rem;
+    }    
+    .search-component .search-content .search-results .destinations a, .search-component .search-content .search-results .locations .loc {
+        font-size: medium;
+    }
+}

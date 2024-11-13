@@ -1,0 +1,15 @@
+.accmodal{
+    /* color: rgba(255, 255, 255, 0.6); */
+    position: fixed;
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out;
+    background: rgba(0, 0, 0, 0.37);
+}

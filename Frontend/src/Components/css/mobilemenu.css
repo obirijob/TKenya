@@ -1,0 +1,50 @@
+.mmenu-component{
+    color: rgba(255, 255, 255, 0.6);
+    position: fixed;
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-in-out;
+    background: radial-gradient(rgba(0, 0, 0, 0.279), rgba(0, 0, 0, 0.815));
+}
+.mmenu-component .search-close{
+    position: absolute;
+    font-size: 2rem;
+    top: 2rem;
+    right: 2rem;
+    color: rgb(180, 64, 83);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.mmenu-component .search-close:hover{
+    transform: rotate(90deg) scale(1.4);
+}
+.mmenu-component .mmenu-content{
+    display: flex;
+    flex-direction: column;
+}
+.mmenu-component .mmenu-content a{
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+.mmenu-component .mmenu-content a span{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    text-transform: uppercase;
+}
+
+@media (max-width: 750px) {
+    .mmenu-component{ 
+        background: radial-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
+    }
+}

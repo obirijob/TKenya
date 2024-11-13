@@ -1,0 +1,139 @@
+social{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.185);
+}
+social mainnav{
+    background: black;
+    color: white;
+    width: calc(100% - 1rem);
+    padding: 0 .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+social mainnav links ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: .5rem 0;
+}
+social mainnav links ul li{
+    transition: .3s ease-in-out;
+    margin: 0 .2rem;
+    padding: .5rem 1rem;
+}
+social mainnav links ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    transition: .3s ease-in-out;
+}
+social mainnav links ul li:hover{
+    background: white;
+}
+social mainnav links ul li:hover a{
+    color: black;
+    letter-spacing: 1px;
+}
+social mainnav links ul li:hover a span{
+    font-size: medium;
+}
+social mainnav links ul li a span{
+    margin-left: .5rem;
+    font-size: 0px;
+    transition: .4s ease-in-out;
+}
+social mainnav search{
+    background: white;
+    color: black;
+    padding: .5rem 1rem;
+}
+social mainnav search input{
+    border: none;
+    background: transparent;
+    outline: none;
+    margin-left: .5rem;
+}
+social mainnav quickview{
+    display: flex;
+    flex-direction: row;
+}
+social mainnav quickview ul{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+social mainnav quickview ul li{
+    cursor: pointer;
+    margin: 0 .6rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+social mainnav quickview ul li:hover{
+    color: black;
+    background: white;
+}
+social mainnav quickview ul li:hover badge{
+    color: white;
+}
+social mainnav quickview ul li badge{
+    background: rgb(109, 49, 49);
+    width: 25px;
+    height: 25px;
+    font-size: x-small;
+    font-family: 'MSB';
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -6px;
+    right: -15px;
+    border: solid 1.5px black;
+}
+social content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+social content lsidebar{
+    flex: 1.4;
+    margin: 1rem;
+} 
+social content maincontent{
+    flex: 3;
+    margin: 1rem;
+} social content rsidebar{
+    flex: 1;
+    margin: 1rem;
+}
+social content lsidebar ul{
+    list-style: none;
+}
+social content lsidebar ul li{
+    font-size: 20px;
+    padding: .5rem 0;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+social content lsidebar ul li:hover{
+    letter-spacing: 2px;
+}
+social content lsidebar ul li badge{
+    font-size: small;
+    background: black;
+    color: white;
+    padding: .16rem;
+    border-radius: .4rem;
+}

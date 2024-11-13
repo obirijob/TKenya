@@ -1,0 +1,69 @@
+facilities{
+    display: flex;
+    flex-direction: column;
+    background: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+bgbox1, bgbox2{
+    position: fixed;
+}
+bgbox1{
+    width: 50%;
+    background: rgba(255, 255, 255, 0.058);
+    height: 40vh;
+    right: 0;
+    top: 7rem;
+}
+bgbox2{
+    width: 50%;
+    background: rgba(255, 255, 255, 0.058);
+    height: 40vh;
+    left: 0;
+    bottom: 1rem;
+}
+facilities content{
+    overflow: scroll;
+    max-width: 100%;
+    min-width: 100%;
+    padding-top: 70px;
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+facilities content welcome{
+    display: flex;
+}
+facilities content welcome welcometext{
+    display: flex;
+    flex-direction: column;
+}
+facilities content welcome welcometext big{
+    font-size: 70px;
+    font-family: 'MSB';
+    padding-left: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+facilities content welcome welcometext small{
+    padding: 1rem 4rem;
+}
+facilities content welcome welcometext welcomesearch{
+    background: white;
+    color: black;
+    padding: .6rem;
+    display: flex;
+    margin-left: 4rem;
+    align-items: center;
+    width: 100%;
+    border-radius: 5px;
+}
+facilities content welcome welcometext welcomesearch input{
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    margin: 0 .6rem;    
+}

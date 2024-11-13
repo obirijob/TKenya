@@ -1,0 +1,688 @@
+@font-face{
+  font-family: 'ML';
+  src: url('./fonts/Montserrat/Montserrat-Light.ttf');
+}
+@font-face{
+  font-family: 'MR';
+  src: url('./fonts/Montserrat/Montserrat-Regular.ttf');
+}
+@font-face{
+  font-family: 'MSB';
+  src: url('./fonts/Montserrat/Montserrat-SemiBold.ttf');
+}
+*{
+  font-family: 'MR';
+  font-size: large;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.homepage .navbar{
+  position: absolute;
+  z-index: 1;
+  width: calc(100% - 8rem);
+  padding: 2rem 4rem 0 4rem;
+  color: rgb(209, 209, 209);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.homepage .navbar .mob-icon{
+  display: none;
+}
+.homepage .navbar .menu{
+  flex: 2;
+}
+.homepage .navbar .logo{
+  flex: 1;
+}
+.homepage .navbar .menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.homepage .navbar .menu .account .loggeduser{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position:relative;
+}
+.homepage .navbar .menu .account .loggeduser span{
+  text-transform: capitalize;
+  font-family: 'MSB';
+  margin-right: 1rem;
+}
+.homepage .navbar .menu .account .loggeduser img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgb(206, 206, 206);
+}
+.homepage .navbar .menu .signin-nav{
+  cursor: pointer;
+  transition: .4s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.homepage .navbar .menu .signin-nav:hover{
+  color: #8a5019;
+}
+.homepage .navbar .menu .signin-nav:focus-within{
+  color: #8a5019;
+}
+.homepage .navbar .menu .links ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+.homepage .navbar .menu .links ul li{
+  margin: 0 .5rem;
+  cursor: pointer;
+  transition: .4s ease-in-out;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.homepage .navbar .menu .links ul li a{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+}
+.homepage .navbar .menu .links ul li a .nav-link-icon{
+  font-size: x-large;
+  transition: .3s ease-in-out;
+}
+.homepage .navbar .menu .links ul li:hover a .nav-link-icon{
+  font-size: medium;
+}
+.homepage .navbar .menu .links ul li:hover{
+  background: #8a501998;  
+}
+.homepage .navbar .menu .links ul li a span{
+  opacity: 0;
+  font-size: 0px;
+  padding-left: .5rem;
+  transition: .3s ease-in-out;
+}
+.homepage .navbar .menu .links ul li:hover a span{
+  opacity: 1;
+  font-size: medium;
+}
+.homepage .navbar .menu .search{
+  background: rgba(255, 255, 255, 0.568);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.74);
+  font-size: large;
+  transform: rotateY(180deg);
+  transition: .4s ease-in-out;
+  cursor: pointer;
+}
+.homepage .navbar .menu .search:hover{
+  background: rgba(255, 255, 255, 0.815);
+}
+.homepage .homeitem{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
+  max-height: 100vh;
+  min-width: 100%;
+  max-width: 100%;
+  transition: 2s ease-in-out;
+  transition-property: opacity;
+  opacity: 0;
+}
+.homepage .homeitem .coverimg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  object-fit: cover;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+.homepage .homeitem .covertint{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.homepage .homeitem .hometext{
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 5vh;
+  left: 6rem;
+  text-transform: uppercase;
+  max-width: 45%;
+  pointer-events: none;
+}
+.homepage .homeitem .hometext .bigtext{
+  font-size: 2rem;
+  font-family: 'MSB';
+  font-weight: bolder;
+  color: white;
+  opacity: .3;
+}
+.homepage .homeitem .hometext .smalltext{
+  font-size: 2rem;
+  font-family: 'MSB';
+  font-weight: bolder;
+  color: white;
+  opacity: .3;
+}
+.homepage .homeitem .hometext .homebutton{
+  margin: 2rem 0;
+  background: rgb(192, 192, 192);
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  display: flex;
+  font-family: 'MSB';
+  align-items: center;
+  justify-content: center;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+.homepage .homeitem .hometext .homebutton:hover{
+  letter-spacing: 3px;
+  background: rgb(173, 173, 173);
+  color: rgb(102, 78, 78);
+}
+.homepage .selector{
+  position: absolute;
+  height: 60vh;
+  background: rgba(255, 255, 255, 0.4);
+  top: 20vh;
+  width: .1rem;
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.homepage .selector .checker{
+  background: rgba(255, 255, 255, 0.404);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 2s ease-in-out;
+}
+.homepage .selector .checker:hover{
+  transform: scale(1.6);
+  background: rgba(255, 255, 255, 1);
+}
+.homepage .selector .selected{
+  background: white;
+  transform: scale(1.8);
+}
+.homepage .places{
+  position: absolute;
+  color: white;
+  top: 60vh;
+  left: 20vh;
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 20vh);
+  align-items: center;
+  transform: translateY(-50%);
+}
+.homepage .places .text{
+  min-width: 35%;
+  max-width: 40%;
+  margin: 0 4rem 0 0;
+}
+.homepage .places .text .pls-search{
+  display: flex;
+  margin: 1rem 0 0 0;
+  padding: .5rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.355);
+  width: fit-content;
+  border-radius: 5px;
+  transition: .4s ease-in-out;
+}
+.homepage .places .text .pls-search:focus-within{
+  background: rgba(0, 0, 0, 0.76);
+}
+.homepage .places .text .pls-search .ic{
+  color: rgba(255, 255, 255, 0.463);
+}
+.homepage .places .text .pls-search input{
+  background: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  margin-left: .5rem;
+}
+.homepage .places .largetext{
+  font-size: 4rem;
+  font-family: 'MSB';
+  text-transform: uppercase; 
+  font-weight: 900; 
+}
+.homepage .places .homebutton{
+  margin: 2rem 0;
+  background: rgb(138, 80, 25);
+  color:white;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  display: flex;
+  font-family: 'MSB';
+  align-items: center;
+  justify-content: center;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+.homepage .places .refreshbutton{
+  font-size: xx-large;
+  margin: 2rem 0;
+  background: rgb(25, 138, 95);
+  color:white;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  display: flex;
+  font-family: 'MSB';
+  align-items: center;
+  justify-content: center;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+.homepage .places .refreshbutton:hover{
+  letter-spacing: 3px;
+  background: rgb(255, 255, 255);
+  color: rgb(25, 138, 95);
+}
+.homepage .places .homebutton:hover{
+  letter-spacing: 3px;
+  background: rgb(255, 255, 255);
+  color: rgb(138, 80, 25);
+}
+
+.homepage .places .destinations {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  position: relative;
+  /* overflow-x: scroll;
+  overflow-y: visible; */
+  overflow: scroll;
+  min-height: 600px;
+  position: relative;
+}
+.homepage .places .destinations .scrollbuttons{
+  position: fixed;
+  display: flex;
+  bottom: 0px;
+  cursor: pointer;
+}
+.homepage .places .destinations .scrollbuttons div {
+  background: rgba(255, 255, 255, 0.2);
+  font-size: xx-large;
+  padding: .5rem;
+  margin-left: 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .4s ease-in-out;
+}
+.homepage .places .destinations .scrollbuttons div:hover{
+  background: rgba(255, 255, 255, 0.952);
+  color: brown;
+}
+.homepage .places .destinations .scrollindicator{
+  position: fixed;
+  color: white;
+  bottom: -1rem;
+  right: 1rem;
+  display: flex;
+  margin: 1rem;
+  pointer-events: none;
+}
+.homepage .places .destinations .scrollindicator span{
+  font-size: large;
+  color: rgba(255, 255, 255, 0.42);
+}
+.homepage .places .destinations .scrollindicator .line{
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.216);
+  color: transparent;
+  margin: 0 .4rem;
+  transform: translateY(-5px);
+}
+.homepage .places .destinations .destination {
+  height: 400px;
+  width: 250px;
+  background: white;
+  /* transform: translateY(-50%); */
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  margin: 1rem;  
+  transition: .4s ease-in-out;
+  opacity: 0.8;
+  box-shadow: 5px 5px 20px black;
+}
+.homepage .places .destinations .destination .description{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1rem;
+  background: linear-gradient(0deg, black, transparent);
+  border-radius: 10px;
+  font-size: small;
+  color: rgba(255, 255, 255, 0.767);
+  opacity: 0;
+  transition: .4s ease-in-out;
+  pointer-events: none;
+}
+.homepage .places .destinations .destination .description a{
+  text-decoration: none;
+  align-self: flex-end;
+  margin: .7rem .4rem .4rem .4rem;
+  cursor: pointer;
+  background: black;
+  padding: .5rem 1rem;
+  color: white;
+  border: white solid 1px;
+  transition: .4s ease-in-out;
+  border-radius: 5px;
+}
+.homepage .places .destinations .destination .description a:hover{
+  background: white;
+  color: black;
+}
+.homepage .places .destinations .destination .destination-rating{
+  position: absolute;
+  top: -1.8rem;
+}
+.homepage .places .destinations .selected {
+  height: 440px;
+  width: 275px;
+  opacity: 1;
+  box-shadow: none;
+  pointer-events: all;
+}
+.homepage .places .destinations .selected .description{
+  opacity: 1;
+  pointer-events: all;
+}
+
+.homepage .places .destinations .destination .name {
+  position: absolute;
+  font-size: 1.2rem;
+  font-family: 'MSB';
+  top: -4rem;
+}
+.homepage .places .destinations .destination img {
+  width: 250px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: .4s ease-in-out;
+}
+.homepage .places .destinations .selected img {
+  width: 275px;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.homepage .places .destinations .destination .bookmark {
+  position:absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 254, 254, 0.808);
+  color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 1rem;
+  right: 0;
+  font-size: large;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+.homepage .places .destinations .destination .bookmark:hover {
+  background: brown;
+  transform: scale(1.1);
+  color: white;
+}
+.rating{
+  display: flex;
+}
+.rating div{
+  min-width: 8px;
+  min-height: 8px;
+  margin: .2rem;
+  border-radius: 50%;
+  background: white;
+}
+.rating .good{
+  opacity: 1;
+}
+.rating .bad{
+  opacity: .3;
+}
+
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+@-webkit-keyframes bubbling /* Safari and Chrome */ {
+  from {
+    -webkit-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+@keyframes bubbling {
+  from {
+    -ms-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -webkit-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+  }
+  to {
+    -ms-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+.bubbling {
+  -webkit-animation: bubbling 2s linear infinite;
+  -moz-animation: bubbling 2s linear infinite;
+  -ms-animation: bubbling 2s linear infinite;
+  -o-animation: bubbling 2s linear infinite;
+  animation: bubbling 2s linear infinite;
+}
+@media (max-width: 1200px) {
+  .homepage .navbar .logo{
+    flex: 0 0;
+    width: max-content;
+  }
+  .homepage .navbar .menu{
+    flex:1;
+  }
+  .homepage .navbar .menu .account .loggeduser span{
+    display: none;
+    width: 0;
+  }
+}
+@media (max-width: 750px) {
+  .homepage .navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5%;
+    width: 90%;
+    flex: 1;
+  }
+  .homepage .navbar .mob-icon{
+    display: flex;
+    font-size: 25px;
+    margin-left: 1rem;
+  }
+  .homepage .navbar .menu{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .homepage .navbar .menu .search{
+    margin: auto;
+  }
+  .homepage .navbar .menu .links{
+    display: none;
+  }
+   .homepage .navbar .menu .account span{
+    display: none;
+  }
+  .homepage .homeitem .hometext{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 1vh;
+    left: 1rem;
+    text-transform: uppercase;
+    max-width: 100%;
+    pointer-events: none;
+  }
+  .homepage .homeitem .hometext .bigtext, .homepage .homeitem .hometext .smalltext{
+    font-size: x-large;
+  }
+  .homepage .selector{
+    margin-left: 1rem;
+    background: transparent;
+  }
+  .homepage .places{
+    flex-direction: column;
+    left: 3rem; top: 4.5rem;
+    transform: translate(0);
+    width: calc(100% - 3rem);
+    align-items: flex-start;
+    height: calc(100vh - 8rem);
+    justify-content: space-evenly;
+  }
+  .homepage .places .text{
+    margin: 0;
+    min-width: 100%;
+  }
+  .homepage .places .text .largetext{
+    font-size: x-large;
+  }
+  .homepage .places .text .description{
+    font-size: small;
+    font-style: italic;
+  }
+  .homepage .places .text .pls-search{
+    margin: .5rem 0;
+    padding: .5rem;
+    width: 80%;
+  }
+  .homepage .places .text .pls-search input{
+    min-width: 0;
+    flex: 1;
+  }
+  .homepage .places .text #refexbtndiv{
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+  }
+  .homepage .places .text #refexbtndiv .refreshbutton, .homepage .places .text #refexbtndiv .homebutton{
+    margin: 0;
+    font-size: medium;
+    padding: .7rem;
+  }
+  .homepage .places .destinations{
+    width: 100%;
+    min-height: max-content;
+    margin: 1rem 0;
+    flex: none;
+    padding-top: 2rem;
+  }
+  .homepage .places .destinations .destination, .homepage .places .destinations .selected{
+    width: calc(40vh * 0.7); height: calc(40vh);
+  }
+  .homepage .places .destinations .destination img{
+    width: calc(40vh * 0.7); height: calc(40vh);
+  }
+  .homepage .places .destinations .destination .name{
+    font-size: medium;
+    top: -2.5rem
+  }
+  .homepage .places .destinations .destination .destination-rating{
+    top: -1.2rem;
+  }
+}

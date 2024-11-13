@@ -1,0 +1,74 @@
+.smallaccount{
+    background: white;
+    padding: 1rem;
+    position: absolute;
+    top: 130%;
+    right: 0;
+    border-radius: 10px;
+    width: 200px;
+    pointer-events: none;
+    opacity: 0;
+    box-shadow: 1px 1px 50px black;
+}
+.smallaccount .close{
+    position: absolute;
+    color: #8a5019;
+    font-size: large;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+.smallaccount .close:hover{
+    background: rgb(143, 45, 45);
+    color: white;
+}
+.smallaccount button{
+    margin-top: .2rem;
+    padding: .6rem;
+    background: #8a5019;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: solid 1.5px white;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.smallaccount button:hover{
+    color: #8a5019;
+    background: white;
+    border: solid 1.5px #8a5019;
+}
+.smallaccount ul{
+    margin: 0;
+    padding: 0 1rem;
+}
+.smallaccount ul .separator{
+    height: 1px;
+    width: 80%;
+    margin: 10px auto;
+    background: #8a5019;
+}
+.smallaccount ul li{
+    list-style: none;
+    color: #866343;
+    font-size: large;
+    padding: .5rem;
+    border-radius: 5px; 
+    transition: .4s ease-in-out;   
+}
+.smallaccount ul li:hover{
+    background: #8a50192f;
+}
+.smallaccount ul li:nth-child(1){
+    margin-top: 1rem;
+}
+.smallaccount ul li:last-child{
+    margin-bottom: 1rem;
+}
+

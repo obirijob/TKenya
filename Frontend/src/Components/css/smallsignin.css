@@ -1,0 +1,101 @@
+.smallsignin{
+    background: white;
+    padding: 1rem;
+    position: absolute;
+    top: 130%;
+    right: 0;
+    border-radius: 10px;
+    width: 230px;
+    pointer-events: none;
+    opacity: 0;
+    box-shadow: 1px 1px 50px black;
+}
+.smallsignin .close{
+    position: absolute;
+    color: #8a5019;
+    font-size: large;
+    right: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+.smallsignin .close:hover{
+    background: rgb(143, 45, 45);
+    color: white;
+}
+.smallsignin .input input{
+    padding: .5rem;
+    margin: .2rem 0;
+    font-size: 1rem;
+    outline: none;
+    border: solid 1.5px #8a50198e;
+    width: 90%;
+    transition: .4s ease-in-out;
+    color: #8a5019;
+    border-radius: 10px;
+}
+.smallsignin .input input:focus{
+    border: solid 1.5px #8a5019;
+    background: #8a50192c;
+}
+.smallsignin .input button{
+    margin-top: .2rem;
+    padding: .6rem;
+    background: #8a5019;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    border: solid 1.5px white;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.smallsignin .input button:hover{
+    background: white;
+    color: #8a5019;
+    border: #8a5019 solid 1.5px;
+}
+.smallsignin .input{
+    margin: 1rem 0;
+}
+.smallsignin .actions{
+    display: flex;
+    flex-direction: column;
+}
+.smallsignin hr{
+    border: none;
+    border-top: solid 1px ;
+    width: 60%;
+    margin: .8rem auto;
+}
+.smallsignin .signup{
+    padding: .6rem;
+    width: 100%;
+    background: rgb(33, 88, 70);
+    color: white;
+    border:  rgb(33, 88, 70) solid 1px;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+}
+.smallsignin .signup:hover{
+    background: white;
+    color: rgb(33, 88, 70);
+}
+.smallsignin #smallSignUp{
+    display: none;
+}
+forgotpassword{
+    cursor: pointer;
+    font-style: italic;
+    transition: .5s ease-in-out;
+}
+forgotpassword:hover{
+    text-decoration: underline;
+}

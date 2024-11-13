@@ -1,0 +1,153 @@
+.destmodal{
+        /* color: rgba(255, 255, 255, 0.6); */
+        position: fixed;
+        z-index: 3;
+        backdrop-filter: blur(10px);
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s ease-in-out;
+        background: rgba(0, 0, 0, 0.37);
+}
+.destmodal-content{
+    position: absolute;
+    width: 95%;
+    height: 90vh;
+    background: white;
+    box-shadow: 6px 6px 100px black;
+    display: flex;
+    flex-direction: column;
+    /* padding: 1rem; */
+    transform: scale(0.8);
+    transition: .5s ease-in-out;
+    border-radius: 5px;
+    overflow: scroll;
+}
+.destmodal-close{
+    position: absolute;
+    font-size: 2rem;
+    top: .5rem;
+    right: .7rem;
+    color: rgb(180, 64, 83);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+.destmodal-close:hover{
+    transform: rotate(90deg) scale(1.4);
+}
+.destmodal-content-title{
+    font-family: 'MSB';
+    font-size: 2rem;
+    padding: 1rem 1rem 0 1rem;
+}
+.destmodal-destinations, .destmodal-facilities{
+    flex: 1;
+    padding: 1rem;
+}
+.destmodal-destinations{
+    color: rgb(34, 34, 66);
+}
+.destmodal-facilities{
+    background: rgb(34, 34, 66);
+    color: white;
+}
+.destmodal-l-top{
+    font-family: 'MSB';
+    display: flex;
+    align-items: center;
+}
+.destmodal-dest-search{
+    margin: 0 1rem;
+    background: rgba(34,34,66,.1);
+    padding: .3rem;
+    border-radius: 5px;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    transition: .5s ease-in-out;
+}
+.destmodal-dest-search input{
+    background: none;
+    outline: none;
+    border: none;
+    margin-left: .2rem;
+    font-size: small;
+}
+.destmodal-dest-search:focus-within{
+    background:  rgba(34,34,66,.3);
+}
+.destmodal-fac-search{
+    margin: 0 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: .3rem;
+    border-radius: 5px;
+    font-size: small;
+    display: flex;
+    align-items: center;
+    transition: .5s ease-in-out;
+    color: rgb(202, 200, 200);
+}
+.destmodal-fac-search input{
+    background: none;
+    outline: none;
+    border: none;
+    margin-left: .2rem;
+    font-size: small;
+}
+.destmodal-fac-search:focus-within{
+    background:  rgba(255, 255, 255, 0.3);
+}
+.destmodal-badge{
+    font-size: small;
+    font-family: 'MSB';
+    color: rgba(34,34,66,1);
+    background: rgb(218, 112, 14);
+    padding: .1rem;
+    border-radius: .1rem;
+    margin-left: .2rem;
+}
+.destmodal-list{
+    display: flex;
+    flex: 1;
+    height: 100%;
+    overflow: scroll;
+}
+.destmodal-list .destmodal-item{
+    max-height: 250px;
+    min-height: 250px;
+    margin: .5rem;
+    max-width: 250px;
+    min-width: 250px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.397);
+    overflow: hidden;
+    position: relative;
+}
+.destmodal-list img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    object-fit: cover;
+    width: 250px; height: 250px;
+}
+.destmodal-list a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.destmodal-list span{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.733);
+}
